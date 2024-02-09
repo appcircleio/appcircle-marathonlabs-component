@@ -9,7 +9,7 @@ end
 platform = ENV['AC_PLATFORM_TYPE']
 output_dir = env_has_key('AC_OUTPUT_DIR')
 app_path = env_has_key('AC_MARATHON_APP_PATH')
-test_app_path = env_has_key('AC_MARATHON_UITEST_RUNNER_IPA_PATH')
+test_app_path = env_has_key('AC_MARATHON_UITEST_RUNNER_APP_PATH')
 api_key = env_has_key('AC_MARATHON_API_KEY')
 test_name = env_has_key('AC_MARATHON_TEST_NAME')
 
