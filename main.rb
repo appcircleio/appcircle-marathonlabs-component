@@ -3,7 +3,7 @@ require 'pathname'
 require 'English'
 
 def env_has_key(key)
-    ENV[key].nil? || ENV[key] == '' ? nil : ENV[key] : abort("Missing #{key}.")
+    return (ENV[key] != nil && ENV[key] !="") ? ENV[key] : abort("Missing #{key}.")
 end
 
 platform = ENV['AC_PLATFORM_TYPE']
