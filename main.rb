@@ -20,14 +20,9 @@ def run_command(command)
   exit_status = $?.exitstatus
 
   if exit_status == 1
-    puts 'Marathon has failed test case. Pipeline broken. Please check your MarathonLab Dashboard'
-    exit exit_status
-  elsif exit_status == 0
-    puts 'Marathon success. There are no any fail test case.'
-    exit exit_status
-  else
-    exit exit_status
+    puts 'Marathon has failed test cases! Please check your Marathon Cloud dashboard.'
   end
+  exit exit_status
 end
 
 def prepare_marathon_cli
@@ -45,3 +40,4 @@ end
 
 prepare_marathon_cli
 run_marathon(output_dir, app_path, test_app_path, api_key, test_name, platform)
+puts 'Marathon finished with success. There are no failed test cases.'
