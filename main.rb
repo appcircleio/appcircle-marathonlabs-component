@@ -26,13 +26,13 @@ def run_command(command)
 end
 
 def prepare_marathon_cli
-  puts 'Preparing Marathon-Cloud CLI Tools'
+  puts 'Preparing Marathon Cloud CLI Tools...'
   run_command('brew tap malinskiy/tap')
   run_command('HOMEBREW_NO_INSTALL_CLEANUP=1 brew install malinskiy/tap/marathon-cloud')
 end
 
 def run_marathon(output_dir, app_path, test_app_path, api_key, test_name, platform)
-  puts 'Starting Marathon Tests'
+  puts 'Starting Tests on Maratahon Cloud...'
   platform_type = platform == 'ObjectiveCSwift' ? 'ios' : 'android'
   command = "marathon-cloud run #{platform_type} --application #{app_path} --test-application #{test_app_path} --name #{test_name} --api-key #{api_key} --output #{output_dir}"
   run_command(command)
