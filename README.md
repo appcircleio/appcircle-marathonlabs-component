@@ -1,4 +1,4 @@
-# Appcircle MarathonLabs Component
+# Appcircle Marathon Cloud Component
 
 ## Required Inputs
 
