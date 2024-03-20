@@ -33,7 +33,7 @@ end
 def prepare_marathon_cli
   puts 'Preparing Marathon-Cloud CLI Tools'
   run_command('brew tap malinskiy/tap')
-  run_command('brew install malinskiy/tap/marathon-cloud')
+  run_command('HOMEBREW_NO_INSTALL_CLEANUP=1 brew install malinskiy/tap/marathon-cloud')
 end
 
 def run_marathon(output_dir, app_path, test_app_path, api_key, test_name, platform)
