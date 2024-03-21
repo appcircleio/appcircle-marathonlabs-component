@@ -32,7 +32,7 @@ def prepare_marathon_cli
 end
 
 def run_marathon(output_dir, app_path, test_app_path, api_key, test_name, platform)
-  puts 'Starting Tests on Maratahon Cloud...'
+  puts 'Starting Tests on Marathon Cloud...'
   platform_type = platform == 'ObjectiveCSwift' ? 'ios' : 'android'
   command = "marathon-cloud run #{platform_type} --application #{app_path} --test-application #{test_app_path} --name #{test_name} --api-key #{api_key} --output #{output_dir}"
   run_command(command)
