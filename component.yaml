@@ -33,6 +33,11 @@ inputs:
   title: Output Directory Path
   description: Specifies the path for Marathon Cloud outputs.
   helpText:
+- key: "AC_MARATHON_BASE_URL"
+  isRequired: false
+  title: Marathon Cloud CLI Download Base URL
+  description: "Base URL of the marathon-cloud CLI release downloads. Defaults to: https://github.com/MarathonLabs/marathon-cloud-cli/releases/download. The step skips the download when marathon-cloud is already on PATH."
+  helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
